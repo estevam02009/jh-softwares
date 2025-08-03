@@ -6,8 +6,8 @@ import { ProductModal } from './components/ProductModal';
 import { Cart } from './components/Cart';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Footer } from './components/Footer';
-import { products } from './data/product';
-import type { Product, CartItem } from './types/Product';
+import { products } from './data/products';
+import { Product, CartItem } from './types/Product';
 
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);

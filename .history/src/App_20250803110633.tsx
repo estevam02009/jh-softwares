@@ -6,7 +6,7 @@ import { ProductModal } from './components/ProductModal';
 import { Cart } from './components/Cart';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Footer } from './components/Footer';
-import { products } from './data/product';
+import { products } from './data/products';
 import type { Product, CartItem } from './types/Product';
 
 function App() {

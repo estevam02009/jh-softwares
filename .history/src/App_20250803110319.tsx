@@ -1,51 +1,49 @@
-import React, { useState } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { ProductGrid } from './components/ProductGrid';
-import { ProductModal } from './components/ProductModal';
-import { Cart } from './components/Cart';
-import { WhatsAppButton } from './components/WhatsAppButton';
-import { Footer } from './components/Footer';
-import { products } from './data/product';
-import type { Product, CartItem } from './types/Product';
+import React, { useState } from "react"
+import { Header } from "./components/Header"
+import { Hero } from "./components/Hero"
+import { ProductGrid } from "./components/ProductGrid"
+import { products } from './data/product'
+import type { Product, CartItem } from "./types/Product"
+import { ProductModal } from "./components/ProductModal"
 
 function App() {
+
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
 
   const handleAddToCart = (product: Product) => {
-    // For quick add, use default selections
+    // Para adição rápida, use seleções padrão
     const newItem: CartItem = {
       product,
-      size: product.sizes[0],
-      color: product.colors[0],
+      size: product.size[0],
+      color: product.color[0],
       quantity: 1
-    };
-    
-    const existingItemIndex = cartItems.findIndex(
-      item => item.product.id === product.id && 
-               item.size === newItem.size && 
-               item.color === newItem.color
-    );
-    
-    if (existingItemIndex >= 0) {
-      const updatedItems = [...cartItems];
-      updatedItems[existingItemIndex].quantity += 1;
-      setCartItems(updatedItems);
-    } else {
-      setCartItems([...cartItems, newItem]);
     }
-  };
+
+    const existingItemIndex = cartItems.findIndex(
+      item => item.product.id === product.id &&
+        item.size === item.size &&
+        item.color === item.color
+    )
+
+    if (existingItemIndex >= 0) {
+      const updatedItems = [...cartItems]
+      updatedItems[existingItemIndex].quantity += 1
+      setCartItems(updatedItems)
+    } else {
+      setCartItems([...cartItems, newItem])
+    }
+  }
 
   const handleAddToCartFromModal = (item: CartItem) => {
     const existingItemIndex = cartItems.findIndex(
-      cartItem => cartItem.product.id === item.product.id && 
-                   cartItem.size === item.size && 
-                   cartItem.color === item.color
+      cartItem => cartItem.product.id === item.product.id &&
+        cartItem.size === item.size &&
+        cartItem.color === item.color
     );
-    
+
     if (existingItemIndex >= 0) {
       const updatedItems = [...cartItems];
       updatedItems[existingItemIndex].quantity += item.quantity;
@@ -75,39 +73,27 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header 
-        cartItemsCount={cartItemsCount}
+      <Header
+        cartItemsCount={0}
         onCartClick={() => setIsCartOpen(true)}
       />
-      
+
       <Hero />
-      
+
       <ProductGrid
         products={products}
-        onAddToCart={handleAddToCart}
+        onAddCart={handleAddToCart}
         onQuickView={handleQuickView}
       />
-      
+
       <ProductModal
         product={selectedProduct}
         isOpen={isProductModalOpen}
         onClose={() => setIsProductModalOpen(false)}
         onAddToCart={handleAddToCartFromModal}
       />
-      
-      <Cart
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        items={cartItems}
-        onUpdateQuantity={handleUpdateQuantity}
-        onRemoveItem={handleRemoveItem}
-      />
-      
-      <Footer />
-      
-      <WhatsAppButton />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
