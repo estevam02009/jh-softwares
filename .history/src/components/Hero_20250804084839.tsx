@@ -23,11 +23,11 @@ export const Hero: React.FC = () => {
                                 onClick={scrollToProducts}
                                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center group"
                             >
-                                Comprar Agora
+                                Shop Now
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </button>
                             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                                Ver Coleção
+                                View Collection
                             </button>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
                             className="rounded-lg shadow-2xl"
                         />
                         <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold">
-                            Entrega Gratuita!
+                            Free Shipping!
                         </div>
                     </div>
                 </div>

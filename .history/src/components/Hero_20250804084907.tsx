@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </button>
                             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                                Ver Coleção
+                                View Collection
                             </button>
                         </div>
                     </div>

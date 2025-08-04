@@ -18,7 +18,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
     const handleAddToCart = () => {
         if (!selectedSize || !selectedColor) {
-            alert('Selecione o tamanho e a cor');
+            alert('Please select size and color');
             return;
         }
 
@@ -39,7 +39,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
         }
 
         const businessPhone = '+5584996643325';
-        const message = `🛍️ Olá! Gostaria de encomendar:\n\n*${product.name}*\nSize: ${selectedSize}\nColor: ${selectedColor}\nQuantity: ${quantity}\nPrice: $${product.price}\n\nCould you please help me with the order?`;
+        const message = `🛍️ Hi! I'd like to order:\n\n*${product.name}*\nSize: ${selectedSize}\nColor: ${selectedColor}\nQuantity: ${quantity}\nPrice: $${product.price}\n\nCould you please help me with the order?`;
 
         window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`, '_blank');
     };
@@ -81,7 +81,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
                         {/* Size Selection */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-900 mb-3">Tamanho</label>
+                            <label className="block text-sm font-semibold text-gray-900 mb-3">Size</label>
                             <div className="flex flex-wrap gap-2">
                                 {product.sizes.map((size) => (
                                     <button
@@ -100,7 +100,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
                         {/* Color Selection */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-900 mb-3">Cor</label>
+                            <label className="block text-sm font-semibold text-gray-900 mb-3">Color</label>
                             <div className="flex flex-wrap gap-3">
                                 {product.colors.map((color) => (
                                     <button
@@ -135,7 +135,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
                         {/* Quantity */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-900 mb-3">Quantidade</label>
+                            <label className="block text-sm font-semibold text-gray-900 mb-3">Quantity</label>
                             <div className="flex items-center space-x-3">
                                 <button
                                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -160,7 +160,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                                 className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
                             >
                                 <ShoppingCart className="w-5 h-5 mr-2" />
-                                Adicionar ao Carrinho
+                                Add to Cart
                             </button>
 
                             <button
@@ -168,17 +168,17 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                                 className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center"
                             >
                                 <MessageCircle className="w-5 h-5 mr-2" />
-                                Comprar pelo WhatsApp
+                                Order via WhatsApp
                             </button>
                         </div>
 
                         <div className="border-t pt-6">
-                            <h4 className="font-semibold text-gray-900 mb-2">Características do Produto</h4>
+                            <h4 className="font-semibold text-gray-900 mb-2">Product Features</h4>
                             <ul className="text-sm text-gray-600 space-y-1">
-                                <li>• Material de alta qualidade</li>
-                                <li>• Confortável e durável</li>
-                                <li>• Lavavel a máquina</li>
-                                <li>• Disponível em vários tamanhos e cores</li>
+                                <li>• Premium quality materials</li>
+                                <li>• Comfortable and durable</li>
+                                <li>• Machine washable</li>
+                                <li>• Available in multiple sizes and colors</li>
                             </ul>
                         </div>
                     </div>

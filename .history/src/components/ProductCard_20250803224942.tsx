@@ -55,7 +55,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
                     <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                         {product.name}
                     </h3>
-                    <span className="text-xl font-bold text-blue-600">R${product.price}</span>
+                    <span className="text-xl font-bold text-blue-600">${product.price}</span>
                 </div>
 
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
@@ -88,7 +88,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
                     </div>
 
                     <div className="text-sm text-gray-500">
-                        {product.sizes.length} tamanhos
+                        {product.sizes.length} sizes
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
     const handleAddToCart = () => {
         if (!selectedSize || !selectedColor) {
-            alert('Selecione o tamanho e a cor');
+            alert('Please select size and color');
             return;
         }
 

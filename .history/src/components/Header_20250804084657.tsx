@@ -20,9 +20,9 @@ export const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartClick }) =
                     {/* Navigation */}
                     <nav className="hidden md:flex space-x-8">
                         <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                        <a href="#products" className="text-gray-700 hover:text-blue-600 transition-colors">Produtos</a>
-                        <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Sobre Nós</a>
-                        <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contato</a>
+                        <a href="#products" className="text-gray-700 hover:text-blue-600 transition-colors">Products</a>
+                        <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                        <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
                     </nav>
 
                     {/* Actions */}

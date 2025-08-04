@@ -18,7 +18,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
     const handleAddToCart = () => {
         if (!selectedSize || !selectedColor) {
-            alert('Selecione o tamanho e a cor');
+            alert('Please select size and color');
             return;
         }
 
@@ -39,7 +39,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
         }
 
         const businessPhone = '+5584996643325';
-        const message = `🛍️ Olá! Gostaria de encomendar:\n\n*${product.name}*\nSize: ${selectedSize}\nColor: ${selectedColor}\nQuantity: ${quantity}\nPrice: $${product.price}\n\nCould you please help me with the order?`;
+        const message = `🛍️ Hi! I'd like to order:\n\n*${product.name}*\nSize: ${selectedSize}\nColor: ${selectedColor}\nQuantity: ${quantity}\nPrice: $${product.price}\n\nCould you please help me with the order?`;
 
         window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`, '_blank');
     };

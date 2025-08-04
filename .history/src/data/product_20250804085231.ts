@@ -58,13 +58,13 @@ export const products: Product[] = [
     },
     {
         id: '6',
-        name: 'Camiseta orgânica',
+        name: 'Eco-Friendly Organic Tee',
         price: 31.99,
-        description: 'Feita de tecido orgânico 100% sustentável. Soft, comfortable, and environmentally conscious.',
+        description: 'Sustainably made from 100% organic cotton. Soft, comfortable, and environmentally conscious.',
         image: 'https://images.pexels.com/photos/8532615/pexels-photo-8532615.jpeg?auto=compress&cs=tinysrgb&w=800',
         category: 'Eco',
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        colors: ['Preta', 'Branca', 'Cinza'],
+        colors: ['Natural', 'Forest Green', 'Earth Brown'],
         featured: true
     }
 ];

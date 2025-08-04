@@ -30,41 +30,41 @@ export const products: Product[] = [
         description: 'Camiseta de performance com tecido macio e caimento soltinho. Perfeita para treino e estilo ativo.',
         image: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=800',
         category: 'Atleta',
-        sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-        colors: ['Preta', 'Branca', 'Cinza'],   
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        colors: ['Black', 'Navy', 'Royal Blue', 'Red'],
         featured: false
     },
     {
         id: '4',
-        name: 'Camiseta premium V-neck',
+        name: 'Premium V-Neck',
         price: 27.99,
-        description: 'Elegante design V-neck com conforto e estilo superior. Feito de tecido premium.',
+        description: 'Elegant v-neck design with superior comfort and style. Made from premium cotton blend.',
         image: 'https://images.pexels.com/photos/8532617/pexels-photo-8532617.jpeg?auto=compress&cs=tinysrgb&w=800',
         category: 'Premium',
         sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-        colors: ['Preta', 'Branca', 'Cinza', 'Azul'],   
+        colors: ['White', 'Black', 'Gray', 'Navy'],
         featured: true
     },
     {
         id: '5',
-        name: 'Camiseta streetwear',
+        name: 'Streetwear Essential',
         price: 34.99,
-        description: 'Design urbano com cortes modernos. Perfeita para amantes de moda urbana.',
+        description: 'Urban-inspired design with modern cuts. Perfect for street fashion enthusiasts.',
         image: 'https://images.pexels.com/photos/8532618/pexels-photo-8532618.jpeg?auto=compress&cs=tinysrgb&w=800',
         category: 'Streetwear',
         sizes: ['S', 'M', 'L', 'XL'],
-        colors: ['Preta', 'Branca', 'Cinza', 'Azul'],
+        colors: ['Black', 'White', 'Olive', 'Burgundy'],
         featured: false
     },
     {
         id: '6',
-        name: 'Camiseta orgânica',
+        name: 'Eco-Friendly Organic Tee',
         price: 31.99,
-        description: 'Feita de tecido orgânico 100% sustentável. Soft, comfortable, and environmentally conscious.',
+        description: 'Sustainably made from 100% organic cotton. Soft, comfortable, and environmentally conscious.',
         image: 'https://images.pexels.com/photos/8532615/pexels-photo-8532615.jpeg?auto=compress&cs=tinysrgb&w=800',
         category: 'Eco',
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        colors: ['Preta', 'Branca', 'Cinza'],
+        colors: ['Natural', 'Forest Green', 'Earth Brown'],
         featured: true
     }
 ];
