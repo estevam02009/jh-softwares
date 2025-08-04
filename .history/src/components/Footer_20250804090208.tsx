@@ -9,10 +9,10 @@ export const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <h3 className="text-2xl font-bold mb-4">Central de Conceito</h3>
+                        <h3 className="text-2xl font-bold mb-4">TeeShop</h3>
                         <p className="text-gray-300 mb-6">
-                            Camisetas de alta qualidade para cada estilo e ocasião.
-                            Nós nos commetemos a fornecer camisetas confortáveis, duráveis e estilosas.
+                            Premium quality t-shirts for every style and occasion.
+                            We're committed to providing comfortable, durable, and stylish apparel.
                         </p>
                         <a
                             href={getWhatsAppSupportUrl()}
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
                             className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors inline-flex items-center"
                         >
                             <MessageCircle className="w-4 h-4 mr-2" />
-                            Entrar em Contato
+                            Chat with Us
                         </a>
                     </div>
 

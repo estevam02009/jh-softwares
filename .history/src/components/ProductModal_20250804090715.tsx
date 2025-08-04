@@ -124,7 +124,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                                                                                     color === 'Natural' ? 'bg-yellow-100 border-gray-400' :
                                                                                         color === 'Verde Floresta' ? 'bg-green-800' :
                                                                                             color === 'Marrom Terra' ? 'bg-yellow-800' :
-                                                                                                color === 'Preta' ? 'bg-black' :
+                                                                                                color === 'Preta' ? 'bg-gray-700' :
                                                                                                 'bg-gray-300'
                                                 }`}
                                         />

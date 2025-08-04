@@ -66,19 +66,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
                             <div
                                 key={index}
                                 className={`w-4 h-4 rounded-full border-2 border-gray-200 ${color === 'Black' ? 'bg-black' :
-                                        color === 'White' ? 'bg-white border-gray-400' :
-                                                        color === 'Azul' ? 'bg-blue-900' :
-                                                            color === 'Cinza' ? 'bg-gray-500' :
-                                                                color === 'Carvão' ? 'bg-gray-700' :
-                                                                    color === 'Azul Royal' ? 'bg-blue-600' :
-                                                                        color === 'Vermelho' ? 'bg-red-500' :
-                                                                            color === 'Oliva' ? 'bg-green-700' :
-                                                                                color === 'Borgonha' ? 'bg-red-800' :
-                                                                                    color === 'Natural' ? 'bg-yellow-100 border-gray-400' :
-                                                                                        color === 'Verde Floresta' ? 'bg-green-800' :
-                                                                                            color === 'Marrom Terra' ? 'bg-yellow-800' :
-                                                                                                color === 'Preta' ? 'bg-black' :
-                                                                                                'bg-gray-300'
+                                        color === 'Branco' ? 'bg-white' :
+                                            color === 'Azul' ? 'bg-blue-900' :
+                                                color === 'Cinza' ? 'bg-gray-500' :
+                                                    color === 'Charcoal' ? 'bg-gray-700' :
+                                                        color === 'Royal Blue' ? 'bg-blue-600' :
+                                                            color === 'Red' ? 'bg-red-500' :
+                                                                color === 'Olive' ? 'bg-green-700' :
+                                                                    color === 'Burgundy' ? 'bg-red-800' :
+                                                                        color === 'Natural' ? 'bg-yellow-100' :
+                                                                            color === 'Forest Green' ? 'bg-green-800' :
+                                                                                color === 'Earth Brown' ? 'bg-yellow-800' :
+                                                                                    'bg-gray-300'
                                     }`}
                                 title={color}
                             />

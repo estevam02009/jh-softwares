@@ -12,7 +12,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products, onAddToCart,
     const [selectedCategory, setSelectedCategory] = useState('Todas');
 
     const categories = ['Todas', ...Array.from(new Set(products.map(p => p.category)))];
-    const filteredProducts = selectedCategory === 'Todas'
+    const filteredProducts = selectedCategory === 'All'
         ? products
         : products.filter(p => p.category === selectedCategory);
 

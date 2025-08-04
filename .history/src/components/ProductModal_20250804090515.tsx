@@ -71,7 +71,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                     <div className="space-y-6">
                         <div>
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-3xl font-bold text-blue-600">R${product.price}</span>
+                                <span className="text-3xl font-bold text-blue-600">${product.price}</span>
                                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                                     {product.category}
                                 </span>
@@ -123,8 +123,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                                                                                 color === 'Borgonha' ? 'bg-red-800' :
                                                                                     color === 'Natural' ? 'bg-yellow-100 border-gray-400' :
                                                                                         color === 'Verde Floresta' ? 'bg-green-800' :
-                                                                                            color === 'Marrom Terra' ? 'bg-yellow-800' :
-                                                                                                color === 'Preta' ? 'bg-black' :
+                                                                                            color === 'Earth Brown' ? 'bg-yellow-800' :
                                                                                                 'bg-gray-300'
                                                 }`}
                                         />

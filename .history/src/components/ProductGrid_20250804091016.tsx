@@ -11,8 +11,8 @@ interface ProductGridProps {
 export const ProductGrid: React.FC<ProductGridProps> = ({ products, onAddToCart, onQuickView }) => {
     const [selectedCategory, setSelectedCategory] = useState('Todas');
 
-    const categories = ['Todas', ...Array.from(new Set(products.map(p => p.category)))];
-    const filteredProducts = selectedCategory === 'Todas'
+    const categories = ['All', ...Array.from(new Set(products.map(p => p.category)))];
+    const filteredProducts = selectedCategory === 'All'
         ? products
         : products.filter(p => p.category === selectedCategory);
 
