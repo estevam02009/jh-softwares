@@ -38,7 +38,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
             return;
         }
 
-        const businessPhone = '+5584996643325';
+        const businessPhone = '+5584998993401';
         const message = `🛍️ Olá! Gostaria de adquirir:\n\n*${product.name}*\nDesenvolvedor: ${product.developer || 'Não especificado'}\nTipo de Licença: ${selectedLicenseType}\nPlataforma: ${selectedPlatform}\nQuantidade: ${quantity}\nPreço: R$${product.price}\n\nVocê poderia me ajudar com a compra?`;
 
         window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`, '_blank');
@@ -183,12 +183,12 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                         </div>
 
                         <div className="border-t pt-6">
-                            <h4 className="font-semibold text-gray-900 mb-2">Características do Produto</h4>
+                            <h4 className="font-semibold text-gray-900 mb-2">Características do Software</h4>
                             <ul className="text-sm text-gray-600 space-y-1">
-                                <li>• Material de alta qualidade</li>
-                                <li>• Confortável e durável</li>
-                                <li>• Lavavel a máquina</li>
-                                <li>• Disponível em vários tamanhos e cores</li>
+                                <li>• Código otimizado e eficiente</li>
+                                <li>• Atualizações regulares e suporte</li>
+                                <li>• Interface intuitiva e amigável</li>
+                                <li>• Compatível com múltiplas plataformas</li>
                             </ul>
                         </div>
                     </div>

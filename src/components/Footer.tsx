@@ -9,10 +9,10 @@ export const Footer: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <h3 className="text-2xl font-bold mb-4">Central de Conceito</h3>
+                        <h3 className="text-2xl font-bold mb-4">JH SOFTWARES</h3>
                         <p className="text-gray-300 mb-6">
-                            Camisetas de alta qualidade para cada estilo e ocasião.
-                            Nós nos commetemos a fornecer camisetas confortáveis, duráveis e estilosas.
+                            Softwares premium para cada necessidade e plataforma.
+                            Nós nos comprometemos a fornecer soluções confiáveis, eficientes e inovadoras.
                         </p>
                         <a
                             href={getWhatsAppSupportUrl()}
@@ -30,9 +30,9 @@ export const Footer: React.FC = () => {
                         <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
                         <ul className="space-y-2 text-gray-300">
                             <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
-                            <li><a href="#products" className="hover:text-white transition-colors">Produtos</a></li>
+                            <li><a href="#products" className="hover:text-white transition-colors">Softwares</a></li>
                             <li><a href="#about" className="hover:text-white transition-colors">Sobre Nós</a></li>
-                            <li><a href="#contact" className="hover:text-white transition-colors">Contato</a></li>
+                            <li><a href="#contact" className="hover:text-white transition-colors">Suporte</a></li>
                         </ul>
                     </div>
 
@@ -40,10 +40,10 @@ export const Footer: React.FC = () => {
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Categorias</h4>
                         <ul className="space-y-2 text-gray-300">
-                            <li><a href="#" className="hover:text-white transition-colors">Camisetas básicas</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Camisetas gráficas</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Roupas esportivas</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Coleção Premium</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Produtividade</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Design & Criação</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Sistemas Operacionais</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Desenvolvimento</a></li>
                         </ul>
                     </div>
 
@@ -53,22 +53,22 @@ export const Footer: React.FC = () => {
                         <div className="space-y-3 text-gray-300">
                             <div className="flex items-center">
                                 <Phone className="w-4 h-4 mr-2" />
-                                <span>+55 (84) 996643325</span>
+                                <span>+55 (84) 998993401</span>
                             </div>
                             <div className="flex items-center">
                                 <Mail className="w-4 h-4 mr-2" />
-                                <span>info@centralconceito.com</span>
+                                <span>info@jhsoftwares.com</span>
                             </div>
                             <div className="flex items-center">
                                 <MapPin className="w-4 h-4 mr-2" />
-                                <span>123 Fashion St, Style City</span>
+                                <span>123 Tech Avenue, Digital City</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                    <p>&copy; 2025 Central Conceito. All rights reserved. Made with ❤️ for SmartCode.</p>
+                    <p>&copy; 2025 JH SOFTWARES. Todos os direitos reservados. Desenvolvido com ❤️ por SmartCode.</p>
                 </div>
             </div>
         </footer>

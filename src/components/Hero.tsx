@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            Softwares Premium para Todos os Negócios
+                            Softwares para Todos os Negócios
                         </h1>
                         <p className="text-xl mb-8 text-blue-100 leading-relaxed">
                             Descubra nossa coleção de softwares profissionais e de alta qualidade. De ferramentas de produtividade a soluções empresariais,

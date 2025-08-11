@@ -21,11 +21,11 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products, onAddToCart,
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                        Nossa coleção de roupas e acessórios
+                        Nossa coleção de softwares
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Descubra roupas e acessórios de alta qualidade em diversos estilos, cores e tamanhos.
-                        Cada peça é cuidadosamente confeccionada para conforto e durabilidade.
+                        Explore softwares de alta qualidade para diversas plataformas e necessidades.
+                        Cada produto é cuidadosamente selecionado para garantir desempenho e confiabilidade.
                     </p>
                 </div>
 

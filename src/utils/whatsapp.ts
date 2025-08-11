@@ -1,5 +1,5 @@
 export const formatWhatsAppOrder = (items: any[]) => {
-    const businessPhone = '+5584996643325'; // Replace with your business WhatsApp number
+    const businessPhone = '+5584998993401'; // Replace with your business WhatsApp number
 
     let message = '🛍️ *Novo pedido*\n\n';
 
@@ -19,7 +19,7 @@ export const formatWhatsAppOrder = (items: any[]) => {
 };
 
 export const getWhatsAppSupportUrl = () => {
-    const businessPhone = '+5584996643325'; // Replace with your business WhatsApp number
+    const businessPhone = '+5584998993401'; // Replace with your business WhatsApp number
     const message = '👋 Olá! Tenho uma pergunta sobre este produto. Você poderia me ajudar?';
 
     return `https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`;
