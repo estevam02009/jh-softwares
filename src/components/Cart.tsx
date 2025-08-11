@@ -29,7 +29,7 @@ export const Cart: React.FC<CartProps> = ({ isOpen, onClose, items, onUpdateQuan
 
             <div className="relative bg-white h-full w-full max-w-md shadow-2xl">
                 <div className="flex items-center justify-between p-6 border-b">
-                    <h2 className="text-xl font-bold text-gray-900">Shopping Cart</h2>
+                    <h2 className="text-xl font-bold text-gray-900">Carrinho de Compras</h2>
                     <button
                         onClick={onClose}
                         className="text-gray-500 hover:text-gray-700 transition-colors"
@@ -44,8 +44,8 @@ export const Cart: React.FC<CartProps> = ({ isOpen, onClose, items, onUpdateQuan
                             <div className="text-gray-400 mb-4">
                                 <ShoppingCart className="w-16 h-16 mx-auto" />
                             </div>
-                            <p className="text-gray-500 text-lg mb-2">Your cart is empty</p>
-                            <p className="text-gray-400">Add some awesome t-shirts to get started!</p>
+                            <p className="text-gray-500 text-lg mb-2">Seu carrinho está vazio</p>
+                            <p className="text-gray-400">Adicione alguns softwares incríveis para começar!</p>
                         </div>
                     ) : (
                         <div className="space-y-6">
@@ -60,7 +60,7 @@ export const Cart: React.FC<CartProps> = ({ isOpen, onClose, items, onUpdateQuan
                                     <div className="flex-1 min-w-0">
                                         <h4 className="font-semibold text-gray-900 truncate">{item.product.name}</h4>
                                         <p className="text-sm text-gray-600">
-                                            {item.size} • {item.color}
+                                            {item.licenseType} • {item.platform}
                                         </p>
                                         <p className="text-sm font-medium text-blue-600">${item.product.price}</p>
                                     </div>
@@ -105,11 +105,11 @@ export const Cart: React.FC<CartProps> = ({ isOpen, onClose, items, onUpdateQuan
                             className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center"
                         >
                             <MessageCircle className="w-5 h-5 mr-2" />
-                            Order via WhatsApp
+                            Pedir via WhatsApp
                         </button>
 
                         <p className="text-xs text-gray-500 text-center">
-                            You'll be redirected to WhatsApp to complete your order
+                            Você será redirecionado para o WhatsApp para completar seu pedido
                         </p>
                     </div>
                 )}
