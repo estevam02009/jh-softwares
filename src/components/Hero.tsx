@@ -12,34 +12,34 @@ export const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            Camisetas Premium para Todos os Estilos
+                            Softwares Premium para Todos os Negócios
                         </h1>
                         <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                            Descubra nossa coleção de camisetas confortáveis e de alta qualidade. De peças básicas clássicas a designs modernos,
-                            encontre o caimento perfeito e expresse seu estilo único.
+                            Descubra nossa coleção de softwares profissionais e de alta qualidade. De ferramentas de produtividade a soluções empresariais,
+                            encontre o software perfeito para impulsionar seu negócio.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
                                 onClick={scrollToProducts}
                                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center group"
                             >
-                                Comprar Agora
+                                Explorar Softwares
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </button>
                             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                                Ver Coleção
+                                Solicitar Demonstração
                             </button>
                         </div>
                     </div>
 
                     <div className="relative">
                         <img
-                            src="https://images.pexels.com/photos/8532614/pexels-photo-8532614.jpeg?auto=compress&cs=tinysrgb&w=800"
-                            alt="Premium T-Shirts Collection"
+                            src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Software Solutions"
                             className="rounded-lg shadow-2xl"
                         />
                         <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold">
-                            Entrega Gratuita!
+                            Suporte Técnico Gratuito!
                         </div>
                     </div>
                 </div>

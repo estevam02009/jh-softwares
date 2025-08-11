@@ -19,15 +19,15 @@ function App() {
     // For quick add, use default selections
     const newItem: CartItem = {
       product,
-      size: product.sizes[0],
-      color: product.colors[0],
+      licenseType: product.licenseTypes[0],
+      platform: product.platforms[0],
       quantity: 1
     };
     
     const existingItemIndex = cartItems.findIndex(
       item => item.product.id === product.id && 
-               item.size === newItem.size && 
-               item.color === newItem.color
+               item.licenseType === newItem.licenseType && 
+               item.platform === newItem.platform
     );
     
     if (existingItemIndex >= 0) {
@@ -42,8 +42,8 @@ function App() {
   const handleAddToCartFromModal = (item: CartItem) => {
     const existingItemIndex = cartItems.findIndex(
       cartItem => cartItem.product.id === item.product.id && 
-                   cartItem.size === item.size && 
-                   cartItem.color === item.color
+                   cartItem.licenseType === item.licenseType && 
+                   cartItem.platform === item.platform
     );
     
     if (existingItemIndex >= 0) {

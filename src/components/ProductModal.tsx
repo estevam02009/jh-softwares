@@ -10,22 +10,22 @@ interface ProductModalProps {
 }
 
 export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose, onAddToCart }) => {
-    const [selectedSize, setSelectedSize] = useState('');
-    const [selectedColor, setSelectedColor] = useState('');
+    const [selectedLicenseType, setSelectedLicenseType] = useState('');
+    const [selectedPlatform, setSelectedPlatform] = useState('');
     const [quantity, setQuantity] = useState(1);
 
     if (!isOpen || !product) return null;
 
     const handleAddToCart = () => {
-        if (!selectedSize || !selectedColor) {
-            alert('Selecione o tamanho e a cor');
+        if (!selectedLicenseType || !selectedPlatform) {
+            alert('Selecione o tipo de licença e a plataforma');
             return;
         }
 
         onAddToCart({
             product,
-            size: selectedSize,
-            color: selectedColor,
+            licenseType: selectedLicenseType,
+            platform: selectedPlatform,
             quantity
         });
 
@@ -33,13 +33,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
     };
 
     const handleWhatsAppOrder = () => {
-        if (!selectedSize || !selectedColor) {
-            alert('Selecione o tamanho e a cor');
+        if (!selectedLicenseType || !selectedPlatform) {
+            alert('Selecione o tipo de licença e a plataforma');
             return;
         }
 
         const businessPhone = '+5584996643325';
-        const message = `🛍️ Olá! Gostaria de encomendar:\n\n*${product.name}*\nTamanho: ${selectedSize}\nCor: ${selectedColor}\nQuantidade: ${quantity}\nPreço: R$${product.price}\n\nVocê poderia me ajudar com o pedido?`;
+        const message = `🛍️ Olá! Gostaria de adquirir:\n\n*${product.name}*\nDesenvolvedor: ${product.developer || 'Não especificado'}\nTipo de Licença: ${selectedLicenseType}\nPlataforma: ${selectedPlatform}\nQuantidade: ${quantity}\nPreço: R$${product.price}\n\nVocê poderia me ajudar com a compra?`;
 
         window.open(`https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`, '_blank');
     };
@@ -77,58 +77,67 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
                                 </span>
                             </div>
                             <p className="text-gray-600 leading-relaxed">{product.description}</p>
+                            
+                            {/* Developer and Release Date */}
+                            <div className="mt-4 space-y-2">
+                                {product.developer && (
+                                    <div className="flex items-center">
+                                        <span className="text-sm font-semibold text-gray-700 mr-2">Desenvolvedor:</span>
+                                        <span className="text-sm text-gray-600">{product.developer}</span>
+                                    </div>
+                                )}
+                                {product.releaseDate && (
+                                    <div className="flex items-center">
+                                        <span className="text-sm font-semibold text-gray-700 mr-2">Lançamento:</span>
+                                        <span className="text-sm text-gray-600">{product.releaseDate}</span>
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
-                        {/* Size Selection */}
+                        {/* License Type Selection */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-900 mb-3">Tamanho</label>
+                            <label className="block text-sm font-semibold text-gray-900 mb-3">Tipo de Licença</label>
                             <div className="flex flex-wrap gap-2">
-                                {product.sizes.map((size) => (
+                                {product.licenseTypes.map((licenseType) => (
                                     <button
-                                        key={size}
-                                        onClick={() => setSelectedSize(size)}
-                                        className={`px-4 py-2 border rounded-lg font-medium transition-all ${selectedSize === size
+                                        key={licenseType}
+                                        onClick={() => setSelectedLicenseType(licenseType)}
+                                        className={`px-4 py-2 border rounded-lg font-medium transition-all ${selectedLicenseType === licenseType
                                                 ? 'border-blue-600 bg-blue-600 text-white'
                                                 : 'border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600'
                                             }`}
                                     >
-                                        {size}
+                                        {licenseType}
                                     </button>
                                 ))}
                             </div>
                         </div>
 
-                        {/* Color Selection */}
+                        {/* Platform Selection */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-900 mb-3">Cor</label>
+                            <label className="block text-sm font-semibold text-gray-900 mb-3">Plataforma</label>
                             <div className="flex flex-wrap gap-3">
-                                {product.colors.map((color) => (
+                                {product.platforms.map((platform) => (
                                     <button
-                                        key={color}
-                                        onClick={() => setSelectedColor(color)}
-                                        className={`flex items-center space-x-2 px-4 py-2 border rounded-lg transition-all ${selectedColor === color
+                                        key={platform}
+                                        onClick={() => setSelectedPlatform(platform)}
+                                        className={`flex items-center space-x-2 px-4 py-2 border rounded-lg transition-all ${selectedPlatform === platform
                                                 ? 'border-blue-600 bg-blue-50'
                                                 : 'border-gray-300 hover:border-gray-400'
                                             }`}
                                     >
-                                        <div
-                                            className={`w-4 h-4 rounded-full border ${color === 'Black' ? 'bg-black' :
-                                                    color === 'White' ? 'bg-white border-gray-400' :
-                                                        color === 'Azul' ? 'bg-blue-900' :
-                                                            color === 'Cinza' ? 'bg-gray-500' :
-                                                                color === 'Carvão' ? 'bg-gray-700' :
-                                                                    color === 'Azul Royal' ? 'bg-blue-600' :
-                                                                        color === 'Vermelho' ? 'bg-red-500' :
-                                                                            color === 'Oliva' ? 'bg-green-700' :
-                                                                                color === 'Borgonha' ? 'bg-red-800' :
-                                                                                    color === 'Natural' ? 'bg-yellow-100 border-gray-400' :
-                                                                                        color === 'Verde Floresta' ? 'bg-green-800' :
-                                                                                            color === 'Marrom Terra' ? 'bg-yellow-800' :
-                                                                                                color === 'Preta' ? 'bg-black' :
-                                                                                                'bg-gray-300'
-                                                }`}
-                                        />
-                                        <span className="text-sm font-medium">{color}</span>
+                                        <div className="flex items-center justify-center w-5 h-5">
+                                            {platform === 'Windows' && <span className="text-blue-600">🪟</span>}
+                                            {platform === 'macOS' && <span className="text-gray-800">🍎</span>}
+                                            {platform === 'Linux' && <span className="text-black">🐧</span>}
+                                            {platform === 'iOS' && <span className="text-gray-800">📱</span>}
+                                            {platform === 'Android' && <span className="text-green-600">🤖</span>}
+                                            {platform === 'Web' && <span className="text-blue-600">🌐</span>}
+                                            {platform === 'PC' && <span className="text-gray-800">💻</span>}
+                                            {!['Windows', 'macOS', 'Linux', 'iOS', 'Android', 'Web', 'PC'].includes(platform) && <span>📊</span>}
+                                        </div>
+                                        <span className="text-sm font-medium">{platform}</span>
                                     </button>
                                 ))}
                             </div>

@@ -48,6 +48,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
                         Destaque
                     </div>
                 )}
+                
+                {/* Developer badge */}
+                {product.developer && (
+                    <div className="absolute bottom-3 left-3 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        {product.developer}
+                    </div>
+                )}
             </div>
 
             <div className="p-6">
@@ -61,35 +68,28 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
 
                 <div className="flex items-center justify-between">
-                    <div className="flex space-x-1">
-                        {product.colors.slice(0, 4).map((color, index) => (
-                            <div
-                                key={index}
-                                className={`w-4 h-4 rounded-full border-2 border-gray-200 ${color === 'Black' ? 'bg-black' :
-                                        color === 'White' ? 'bg-white border-gray-400' :
-                                                        color === 'Azul' ? 'bg-blue-900' :
-                                                            color === 'Cinza' ? 'bg-gray-500' :
-                                                                color === 'Carvão' ? 'bg-gray-700' :
-                                                                    color === 'Azul Royal' ? 'bg-blue-600' :
-                                                                        color === 'Vermelho' ? 'bg-red-500' :
-                                                                            color === 'Oliva' ? 'bg-green-700' :
-                                                                                color === 'Borgonha' ? 'bg-red-800' :
-                                                                                    color === 'Natural' ? 'bg-yellow-100 border-gray-400' :
-                                                                                        color === 'Verde Floresta' ? 'bg-green-800' :
-                                                                                            color === 'Marrom Terra' ? 'bg-yellow-800' :
-                                                                                                color === 'Preta' ? 'bg-black' :
-                                                                                                'bg-gray-300'
-                                    }`}
-                                title={color}
-                            />
-                        ))}
-                        {product.colors.length > 4 && (
-                            <div className="text-xs text-gray-500 ml-1">+{product.colors.length - 4}</div>
-                        )}
+                    <div className="flex flex-col">
+                        <div className="text-xs text-gray-500 mb-1">Plataformas:</div>
+                        <div className="flex space-x-1">
+                            {product.platforms.map((platform, index) => (
+                                <span
+                                    key={index}
+                                    className="inline-flex items-center px-2 py-1 rounded-md bg-gray-100 text-xs font-medium text-gray-800"
+                                    title={platform}
+                                >
+                                    {platform}
+                                </span>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="text-sm text-gray-500">
-                        {product.sizes.length} tamanhos
+                        {product.releaseDate && (
+                            <span className="inline-block">
+                                Lançamento: {product.releaseDate}
+                            </span>
+                        )}
+                        {product.licenseTypes.length} licenças
                     </div>
                 </div>
             </div>

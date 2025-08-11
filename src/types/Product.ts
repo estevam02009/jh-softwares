@@ -5,14 +5,16 @@ export interface Product {
     description: string;
     image: string;
     category: string;
-    sizes: string[];
-    colors: string[];
+    licenseTypes: string[];
+    platforms: string[];
     featured?: boolean;
+    developer?: string;
+    releaseDate?: string;
 }
 
 export interface CartItem {
     product: Product;
-    size: string;
-    color: string;
+    licenseType: string;
+    platform: string;
     quantity: number;
 }
